@@ -1,0 +1,21 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+
+@layer components {
+    .navbar {
+      .wrapper {
+        grid-template-columns: auto 1fr auto;
+      }
+  
+      .navbar__primary-menu {
+        @apply hidden tablet:block;
+      }
+  
+      .navbar__secondary-menu {
+  
+      }
+    }
+  } */
