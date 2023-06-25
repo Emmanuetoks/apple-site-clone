@@ -1,0 +1,24 @@
+@layer components {
+  .hamburger {
+    width: 18px;
+    height: fit-content;
+    /* aspect-ratio: 8 / 1; */
+    @apply space-y-1;
+    div {
+      transition: transform 500ms ease;
+      width: 100%;
+      height: 2px;
+      @apply bg-[#b3b3b3];
+    }
+  }
+
+  .hamburger--active {
+    :nth-child(1) {
+      transform: translateY(200%) rotate(39deg);
+    }
+
+    :nth-child(2) {
+      transform: translateY(-100%) rotate(-39deg);
+    }
+  }
+}

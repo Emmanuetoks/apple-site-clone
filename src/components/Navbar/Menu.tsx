@@ -7,7 +7,7 @@ type Props = {
 const Menu = ({ type, styles, children }: Props) => {
   return (
     <div className={`${type}`}>
-      <ul className={`bg-red text-red-700 flex w-full h-full ${styles}`}>{children}</ul>
+      <ul className={`flex w-full h-full ${styles}`}>{children}</ul>
     </div>
   );
 };

@@ -1,15 +1,15 @@
 import React from 'react'
 
 type Props = {
-    className?:string;
-    children: React.ReactNode
+    page?:string;
+    children?: React.ReactNode;
 }
 
-const Main = ({className}: Props) => {
+const Main = ({page, children}: Props) => {
   return (
-    <main className={`${className}`}>
-
-    </main>
+    <div className={`${page}`}>
+      {children}
+    </div>
   )
 }
 

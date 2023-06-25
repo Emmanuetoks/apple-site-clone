@@ -7,6 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundColor: {
+        gray: {
+          100: "hsl(0, 0%, 23%)",
+          200: "hsl(240, 1%, 26%)",
+        },
+        white: {
+          100: "hsl(0, 0%, 100%)",
+          200: "hsl(240, 11%, 96%)",
+        },
+      },
       screens: {
         mobile: "500px",
         tablet: "812px",
@@ -14,11 +24,20 @@ module.exports = {
       },
 
       textColor: {
-        'white': {
-          50: '',
-          100: ''
-        }
-      }
+        white: {
+          100: "hsl(0, 0%, 100%)",
+          200: "hsl(240, 11%, 96%)",
+        },
+        blue: {
+          100: "hsl(209, 72%, 49%)",
+          200: "hsl(209, 100%, 58%)",
+        },
+
+        gray: {
+          100: "hsl(240, 1%, 62%)",
+          200: "hsl(240, 1%, 44%)",
+        },
+      },
     },
   },
   plugins: [],

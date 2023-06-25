@@ -1,21 +1,22 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities;
-@tailwind variants;
-
+/* TTo change responsiveness, tweak wrapper-gap and wrapper-width */
 
 @layer components {
-    .navbar {
-      .wrapper {
-        grid-template-columns: auto 1fr auto;
-      }
-  
-      .navbar__primary-menu {
-        @apply hidden tablet:block;
-      }
-  
-      .navbar__secondary-menu {
-  
-      }
+
+  .navbar {
+    .wrapper {
+      gap: calc(5vw + 3rem);
     }
-  } */
+
+    a {
+      cursor: pointer;
+    }
+  }
+
+  .navbar__primary-menu {
+    @apply hidden tablet:block;
+
+    .navlink {
+        font-size: 0.8rem;
+    }
+  }
+}
