@@ -1,0 +1,15 @@
+@layer components {
+  .footer {
+   @apply px-8 text-[0.9rem] text-gray-200 font-normal;
+    .footer__links {
+      a {
+        @apply text-gray-200 text-[0.9rem] font-normal font-[400];
+
+      }
+
+      h5 {
+        @apply font-[500];
+      }
+    }
+  }
+}

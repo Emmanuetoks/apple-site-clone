@@ -1,0 +1,8 @@
+@layer components {
+  .content {
+    .content__module-image > figure {
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}

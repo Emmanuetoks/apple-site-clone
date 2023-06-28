@@ -1,0 +1,21 @@
+@layer components {
+    .accordion {
+        .accordion__item {
+          
+        }
+
+        .accordion__content {
+            width: 100%;
+            /* padding: 2rem; */
+            /* transition: al 2000ms ease; */
+        }
+
+        .accordion__content--hide {
+            height: 0;
+        }
+
+        .accordion__content--hide > * {
+            opacity: 0;
+        }
+    }
+}
