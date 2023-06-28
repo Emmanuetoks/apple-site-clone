@@ -4,7 +4,7 @@ type Props = {
   styles?: string;
 };
 
-const Menu = ({ type, styles, children }: Props) => {
+const Menu = ({ type, styles, children}: Props) => {
   return (
     <div className={`${type}`}>
       <ul className={`flex w-full h-full ${styles}`}>{children}</ul>

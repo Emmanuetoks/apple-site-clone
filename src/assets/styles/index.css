@@ -1,23 +1,64 @@
 /* @import "./_vars.css"; */
-@import "./navMenu.css";
-@import './hamburger.css';
-@import './footer.css';
-
+@import "./_vars.css";
+@import "./NavBar.css";
+@import "./HamBurger.css";
+@import "./Footer.css";
+@import "./Accordion.css";
+@import "./ContentModule.css";
+@import './SubMenu.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
 
+@font-face {
+  font-family: Helvetica;
+  src: url("../fonts/Helvetica/Helvetica.ttf");
+}
 
 @font-face {
-    font-family: Helvetica;
-    src: url('../fonts/Helvetica/Helvetica.ttf');
+  font-family: "SF-Pro";
+  src: url("../fonts/SF-Pro/SFProDisplay-Thin.woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF-Pro";
+  @font-face {
+    font-family: "SF-Pro";
+    src: url("../fonts/SF-Pro/SFProDisplay-Ultralight.woff2");
+    font-weight: 200;
+    font-style: normal;
+  }
+  src: url("../fonts/SF-Pro/SFProDisplay-Light.woff2");
+  font-weight: 300;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: "SF-Pro";
+  src: url("../fonts/SF-Pro/SFProDisplay-Regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF-Pro";
+  src: url("../fonts/SF-Pro/SFProDisplay-Medium.woff2");
+  font-style: normal;
+  font-weight: 500;
+}
 
 @layer base {
-    body {
-        font-family: Helvetica, sans-serif;
-    }
+  body {
+    font-family: "SF-Pro", sans-serif;
+  }
 }
 
+@layer components {
+  .blur-sections {
+    section {
+      @apply blur-sm;
+    }
+  }
+}

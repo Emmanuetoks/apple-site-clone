@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      borderColor: {
+        gray: {
+          100: 'hsl(240, 1%, 26%)'
+        }
+      },
       backgroundColor: {
         gray: {
           100: "hsl(0, 0%, 23%)",
@@ -38,6 +43,16 @@ module.exports = {
           200: "hsl(240, 1%, 44%)",
         },
       },
+      colors: {
+        gray: {
+          100: 'hsl(240, 1%, 62%)',
+          200: "hsl(240, 2%, 16%)",
+        },
+
+        blue: {
+          200: 'hsl(210, 100%, 40%)',
+        }
+      }
     },
   },
   plugins: [],

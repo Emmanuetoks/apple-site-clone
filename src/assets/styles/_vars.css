@@ -16,4 +16,16 @@ hsl(0, 0%, 100%) */
 /* Font sizez
 17px 
 12px
- */
+hsl(210, 100%, 40%) */
+
+ /* $bg: hsl(240, 1%, 33%)
+
+ hsl(240, 2%, 16%)
+
+  */
+
+@custom-media --mobile (min-width: 500px;);
+@custom-media --tablet (min-width: 812px;);
+@custom-media --desktop (min-width: 1030px;)
+
+/* $bg: #fafafa; */
