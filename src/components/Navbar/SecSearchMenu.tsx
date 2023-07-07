@@ -5,6 +5,8 @@ const SearchMenu = () => {
     ) as HTMLDivElement;
 
     secSearchMenu.classList.remove("navbar__secondary-menu--active");
+const body = document.querySelector('body')
+body.style.overflow = 'auto';
   };
   return (
     <div className="navbar__secondary-search-menu block tablet:hidden bg-black-100">
