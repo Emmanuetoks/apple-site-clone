@@ -1,9 +1,36 @@
+'use client'
+
+import { MouseEventHandler, useEffect } from "react";
+
 type Props = {
   type: string;
   styles: string;
 };
 
 const Logo = ({ type, styles }: Props) => {
+  useEffect(() =>{
+    const handleMouseOver:EventListener = (e: Event) => {
+      const nav = document.querySelector("nav");
+      const subMenus = document.querySelectorAll(".navbar__submenu");
+
+      const eventTarget = e.target as Element
+      if (
+        !(
+          eventTarget?.closest(".navbar__submenu") ||
+          nav?.contains(eventTarget) ||
+          e.target === nav
+        )
+      ) {
+        subMenus.forEach((submenu) => {
+          submenu?.classList.remove("fade-in", "submenu--enter");
+        });
+        nav?.classList.add("bg-black-200");
+        document.querySelector("body")?.classList.remove("blur-sections");
+      }
+    };
+
+    document.querySelector('body')?.addEventListener('mouseover', handleMouseOver)
+  }, [])
   return (
     <span className={`${type} flex items-center`}>
       <a className="normal hidden tablet:block">

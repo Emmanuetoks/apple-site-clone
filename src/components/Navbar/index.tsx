@@ -17,6 +17,7 @@ interface Props {
 const NavBar = ({ bgColor }: Props) => {
   const views = useRef<HTMLDivElement[] | never[]>([]);
   const possible = ['bg-black-200']
+  
   return (
     <nav
       className={`bg-black-100 ${bgColor} navbar w-full flex justify-center px-8 fixed z-20`}

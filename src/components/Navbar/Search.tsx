@@ -23,15 +23,17 @@ const Search = ({ styles }: Props) => {
   };
 
   const handleSubMenu = () => {
-    document.querySelector('nav')?.classList.toggle('bg-black-200')
+    const nav = document.querySelector("nav");
+
+     nav?.classList.remove("bg-black-200")
 
     document
       .querySelectorAll(".navlink + .navbar__submenu")
       .forEach((submenu: Element) => {
         submenu.classList.remove("fade-in", "submenu--enter");
       });
-    subMenu.current?.classList.toggle("fade-in");
-    subMenu.current?.classList.toggle("submenu--enter");
+    subMenu.current?.classList.add("fade-in");
+    subMenu.current?.classList.add("submenu--enter");
     if (subMenu.current?.classList.contains("submenu--enter")) {
       document.querySelector("body")?.classList.add("blur-sections");
     } else {
@@ -71,7 +73,11 @@ const Search = ({ styles }: Props) => {
         ref={subMenu}
         className="navbar__submenu hidden absolute left-0 right-0 top-[100%] shadow-none z-30 bg-black-100 tablet:flex text-white-100"
       >
-       <input type="text" placeholder="Search" className="px-6 py-4 bg-inherit text-2xl border-none outline-none"/>
+        <input
+          type="text"
+          placeholder="Search"
+          className="px-6 py-4 bg-inherit text-2xl border-none outline-none"
+        />
       </div>
     </div>
   );

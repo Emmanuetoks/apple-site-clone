@@ -1,11 +1,9 @@
-"use client";
 
 import Footer from "@/components/Footer";
 import "../assets/styles/index.css";
 import NavBar from "@/components/Navbar";
 import localFont from "next/font/local";
 import { BaseSyntheticEvent } from "react";
-// import '../assets/fonts/'
 const SFPro = localFont({
   src: [
     {
@@ -48,27 +46,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const handleMouseOver = (e: BaseSyntheticEvent) => {
-    const nav = document.querySelector("nav");
-    const subMenus = document.querySelectorAll(".navbar__submenu");
-    // nav.
-    if (
-      !(
-        e.target.closest(".navbar__submenu") ||
-        nav?.contains(e.target) ||
-        e.target === nav
-      )
-    ) {
-      subMenus.forEach((submenu) => {
-        submenu?.classList.remove("fade-in", "submenu--enter");
-      });
-      nav?.classList.add("bg-black-200");
-      document.querySelector("body")?.classList.remove("blur-sections");
-    }
-  };
+
   return (
     <html lang="en">
-      <body onMouseOver={handleMouseOver} className={SFPro.className}>
+      <body className={SFPro.className}>
         <NavBar bgColor="bg-black-200" />
         {children}
         <Footer />
