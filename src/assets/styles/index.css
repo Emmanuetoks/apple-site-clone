@@ -6,6 +6,8 @@
 @import "./Accordion.css";
 @import "./ContentModule.css";
 @import './SubMenu.css';
+@import './SecondaryMenu.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -56,9 +58,18 @@
 }
 
 @layer components {
+
+  .section--grid {
+    div.content {
+      @apply h-[30rem] tabletX:h-[36rem];
+    }
+  }
   .blur-sections {
-    section {
-      @apply blur-sm;
+    /* @media (--tablet) { */
+      section, footer {
+        transition: filter 100ms ease;
+        @apply blur-lg;
+      /* } */
     }
   }
 }

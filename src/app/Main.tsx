@@ -7,7 +7,7 @@ type Props = {
 
 const Main = ({page, children}: Props) => {
   return (
-    <main className={`${page}`}>
+    <main className={`${page} pt-[2.75rem] min-[1070px]:max-[1130px]:pt-[1.5rem]`}>
       {children}
     </main>
   )

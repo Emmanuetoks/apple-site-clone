@@ -1,67 +1,31 @@
 /* TTo change responsiveness, tweak wrapper-gap and wrapper-width */
 @layer components {
   .navbar {
+    transition: background-color 300ms ease-in;
     .wrapper {
       gap: calc(5vw + 3rem);
     }
-    
   }
 
   a {
     cursor: pointer;
   }
-}
-
-.navbar__primary-menu {
-  @apply hidden tablet:block;
-
-  .navlink {
-    font-size: 0.75rem;
-    font-weight: 100;
-    letter-spacing: 1px;
+  .change-color {
+    background-color: rgb(29, 29, 31);
+  }
+  .navbar__primary-menu {
+    @apply hidden tablet:block;
+  
+    .navlink {
+      font-size: 0.75rem;
+      font-weight: 100;
+      letter-spacing: 1px;
+    }
   }
 }
 
-.navbar__secondary-menu {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  background-color: black;
-}
 
-.navbar__secondary-menu--active {
-  /* min-height: 100svh; */
-  animation: dropdown-nav-menu 500ms forwards;
-  transition: all 500ms ease-in;
-  animation-timing-function: cubic-bezier(0.57, 0.21, 0.69, 1.25);
-}
 
-@keyframes dropdown-nav-menu {
-  0% {
-    height: 0;
-  }
 
-  10% {
-    height: 10vh;
-  }
 
-  25% {
-    height: 25vh;
-  }
 
-  40% {
-    height: 40vh;
-  }
-
-  80% {
-    height: 80vh;
-  }
-
-  90% {
-    height: 90vh;
-  }
-  100% {
-    min-height: 100svh;
-  }
-}

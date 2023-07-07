@@ -1,8 +1,11 @@
 @layer components {
   .content {
-    .content__module-image > figure {
-      background-position: center;
-      background-repeat: no-repeat;
+    figure.iphone14__pro > :first-child{
+      scale: 1.2;
+      bottom: 12rem;
+      /* background-image: url('../../app/(home)/assets/images/hero_iphone14pro_spring__9xo85pm6sbmm_large.jpg'); */
+      /* background-position: center;
+      background-repeat: no-repeat; */
     }
   }
 }

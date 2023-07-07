@@ -4,10 +4,12 @@ import SubMenu from "./SubMenu";
 
 type Props = {
   linkName: string;
+  children:React.ReactNode
 };
 
-const NavLink = ({ linkName }: Props) => {
+const NavLink = ({ linkName, children }: Props) => {
   const handleMouseEnter = (e: BaseSyntheticEvent) => {
+    document.querySelector('nav')?.classList.remove('bg-black-200')
     let oneHas = false;
     document
       .querySelectorAll(".navbar__submenu")
@@ -24,9 +26,11 @@ const NavLink = ({ linkName }: Props) => {
         .querySelectorAll(".navbar__submenu")
         .forEach((submenu: Element) => {
           if (!(submenu === e.target.nextSibling)) {
-            submenu.classList.remove("fade-in", 'submenu--enter');
+            setTimeout(() => {
+              submenu.classList.remove("fade-in", 'submenu--enter');  
+            }, 300);
           } else {
-            submenu.classList.add("fade-in", 'submenu--enter');
+              submenu.classList.add("fade-in", 'submenu--enter');
           }
         });
     } else {
@@ -36,13 +40,11 @@ const NavLink = ({ linkName }: Props) => {
   };
 
   return (
-    <li className="h-full navlink">
-      <a onMouseEnter={handleMouseEnter} href="">
+    <li className="h-full">
+      <a onMouseEnter={handleMouseEnter} className="hover:text-gray-100 navlink" href="">
         {linkName}
       </a>
-      <SubMenu>
-        <div className="text-white-200">{linkName}</div>
-      </SubMenu>
+      {children}
     </li>
   );
 };

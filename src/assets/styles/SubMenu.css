@@ -1,35 +1,49 @@
 @layer components {
-    .navbar__submenu {
-        opacity: 0;
-      }
-      .fade-in {
-        opacity: 1;
-      }
-      .submenu--enter {
-        display: block;
-        animation: dropdown-submenu 500ms forwards;
-        animation-timing-function: cubic-bezier(0.57, 0.21, 0.69, 1.25);
-      }
-  
-      @keyframes dropdown-submenu {
-        0% {
-          height: 30vh;
-        }
-  
-        10% {
-          height: 40vh;
-        }
-  
-        25% {
-          height: 55vh;
-        }
-  
-        40% {
-          height: 60vh;
-        }
-  
-        100% {
-          min-height: 70svh;
-        }
-      }
+  .navbar__submenu {
+    display: none;
+    height: 0;
+
+    * {
+      opacity: 0;
+      /* animation: text-fade-out 100ms ease-in forwards; */
+
+    }
+  }
+  .fade-in {
+    * {
+      animation: text-fade-in 500ms ease-in forwards;
+    }
+  }
+
+  @keyframes text-fade-in {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+  .submenu--enter {
+    padding-inline: 4rem;
+    padding-block: 2rem;
+    display: block;
+    animation: dropdown-submenu 200ms forwards;
+    animation-timing-function: cubic-bezier(0.57, 0.21, 0.69, 1.25);
+  }
+
+  @keyframes dropdown-submenu {
+    0% {
+      height: 0;
+    }
+
+    100% {
+      height: auto;
+    }
+  }
+
 }
