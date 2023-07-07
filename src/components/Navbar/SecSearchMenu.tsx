@@ -29,7 +29,7 @@ const SearchMenu = () => {
         <input
           type="text"
           placeholder="Search"
-          className="px-6 py-4 bg-inherit text-2xl border-none outline-none "
+          className="px-6 py-4 bg-inherit text-2xl border-none outline-none text-white-100"
         />
       </div>
     </div>

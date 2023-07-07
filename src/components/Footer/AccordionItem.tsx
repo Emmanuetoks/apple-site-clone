@@ -26,14 +26,16 @@ const AccordionItem = ({
 }: Props) => {
   const accorButton = useRef<HTMLButtonElement>(null);
   const handleClick: MouseEventHandler = (e: BaseSyntheticEvent) => {
-    const accorBtn: HTMLButtonElement = e.target.querySelector("button");
-    accorBtn.classList.toggle("rotate");
+    accorButton.current?.classList.toggle("rotate");
     accorContents[Number(accorButton.current?.id)].classList.toggle(
       "accordion__content--hide"
     );
   };
   return (
-    <div onClick={handleClick} className="accordion__item w-full bottom border-b-[1px] border-gray-300 py-3 cursor-pointer">
+    <div
+      onClick={handleClick}
+      className="accordion__item w-full bottom border-b-[1px] border-gray-300 py-3 cursor-pointer"
+    >
       <div className="accordion__name justify-between w-full flex text-black">
         <span>{name}</span>
         <button

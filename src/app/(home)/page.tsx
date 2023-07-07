@@ -1,4 +1,4 @@
-import Main from "@/app/Main";
+import Main from "@/components/_ui_/Main";
 import ContentModule from "./ContentModule";
 // import NavBar from './Navbar/index.tsx'
 // import NavBar from "../../components/Navbar"

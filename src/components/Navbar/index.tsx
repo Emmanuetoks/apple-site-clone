@@ -16,7 +16,7 @@ interface Props {
 
 const NavBar = ({ bgColor }: Props) => {
   const views = useRef<HTMLDivElement[] | never[]>([]);
-  const possible = ['bg-black-100']
+  const possible = ['bg-black-200']
   return (
     <nav
       className={`bg-black-100 ${bgColor} navbar w-full flex justify-center px-8 fixed z-20`}
@@ -96,7 +96,7 @@ const NavBar = ({ bgColor }: Props) => {
             <SubMenu>
               <div>
                 <h5 className=" text-sm tracking-wider text-gray-100 font-thin mb-3">Get Help</h5>
-                <ul className="space-y-2">
+                <ul className="space-y-2 text-xl">
                   <li>Community</li>
                   <li>Check Coverage</li>
                   <li>Contact Us</li>
@@ -105,7 +105,7 @@ const NavBar = ({ bgColor }: Props) => {
 
               <div>
                 <h5 className=" text-sm tracking-wider text-gray-100 font-thin mb-3">Helpful Topics</h5>
-                <ul className="space-y-2">
+                <ul className="space-y-2 text-xl">
                   <li>Apple ID & Password</li>
                   <li>Billing & Subscriptions</li>
                   <li>Find My</li>
